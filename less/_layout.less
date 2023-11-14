@@ -1,0 +1,141 @@
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+// Global layout
+section.global-section {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  header,
+  footer, 
+  .body-section {
+    padding: 12px 20px;
+  }
+  header {
+    width: 100%;
+    min-height: 50px;
+    background-color: #c9ecfd;
+  }
+  footer {
+    width: 100%;
+    min-height: 100px;
+    background-color: #c9ecfd;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+    background-color: beige;
+    display: flex;
+    flex-direction: row;
+    .body-section {
+      padding: 12px 20px;
+      height: 100%;
+      overflow: hidden;
+      // overflow-y: auto;
+      flex-grow: 1;
+      background-color: #fff;
+    }
+    .sidebar {
+      padding: 12px 0;
+      min-width: 200px;
+      max-width: 200px;
+      background-color: #335566;
+      color: antiquewhite;
+    }
+  }
+}
+// Typography
+h1, h2 {
+  line-height: 1.1;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 8px 0;
+}
+h3 {
+  line-height: 24px;
+  font-size: 20px;
+  padding: 8px 0;
+}
+h4 {
+  line-height: 24px;
+  font-size: 18px;
+  padding: 8px 0;
+}
+p, ul, ol {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 0 8px 0;
+}
+// Header
+header h1 {
+  padding: 0;
+}
+// Footer
+footer {
+  display: inline-table;
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+} 
+
+// SideBar & Body section
+.body-section, 
+.sidebar {
+  .wrapper {
+    position: relative;
+    max-width: 600px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+// SideBar 
+.sidebar {
+  .wrapper {
+    padding: 0;
+    h2 {
+      padding: 8px 20px 12px 20px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #335566;
+    }
+    // h2 + ul {
+    //   padding-top: 56px;
+    // }
+    ul > li {
+      font-size: 14px;
+      line-height: 32px;
+      padding: 0 20px;
+      border-bottom: 1px solid #faebd77a;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      &.active {
+        cursor: default;
+      }
+      &:hover,
+      &.active {
+        background-color: #497083;
+      }
+    }  
+  }
+}
+// Body section
+.body-section {
+  .wrapper {
+    padding: 0;
+  }
+
+}
