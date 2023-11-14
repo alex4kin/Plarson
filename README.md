@@ -1,2 +1,3 @@
 # Plarson
-Plarson html/css test task.
+HTML/CSS test from Plarson. 
+No scripts, only html - css/less.
